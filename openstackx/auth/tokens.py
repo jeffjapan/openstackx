@@ -55,7 +55,7 @@ class TokenManager(base.ManagerWithFind):
         return self._create('tokens', params, "access")
 
     def create_scoped_with_token(self, tenant, token):
-        params = {"auth": {"tenantId": tenant, "token": {"id": token}}}
+        params = {"auth": {"tenantId": tenant, "tokenId": token}}
         return self._create('tokens', params, "access")
 
 
